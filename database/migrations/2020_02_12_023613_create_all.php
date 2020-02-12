@@ -16,7 +16,7 @@ class CreateAll extends Migration
         Schema::dropIfExists('requests');
         Schema::create('requests', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('url', 40)->default('http://httpbin.org/post')->nullable(false);
+            $table->string('url', 40)->default('https://atomic.incfile.com/fakepost')->nullable(false);
             $table->string('method', 40)->default('POST')->nullable(false);
             $table->json('body')->nullable(false);
             $table->integer('code')->default(200)->unsigned()->nullable(false);
